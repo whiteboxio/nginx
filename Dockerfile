@@ -123,6 +123,7 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     && ln -sf /dev/stderr /var/log/nginx/error.log
 
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY whitebox.io.conf /etc/nginx/conf.d/whitebox.io.conf
 COPY xls2txt.whitebox.io.conf /etc/nginx/conf.d/xls2txt.whitebox.io.conf
 
 EXPOSE 80 443
